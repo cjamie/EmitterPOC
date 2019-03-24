@@ -25,13 +25,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fuck you Francisco! uWu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Va-tbT">
-                                <rect key="frame" x="76" y="564" width="239" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rJW-0n-ydl">
+                                <rect key="frame" x="68.5" y="576" width="238.5" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuck" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsW-wy-N2N">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you Francisco!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jus-Va-tbT">
+                                        <rect key="frame" x="50" y="0.0" width="138.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uWu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2E-Ho-lY9">
+                                        <rect key="frame" x="193.5" y="0.0" width="45" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgb-pV-CLO">
                                 <rect key="frame" x="164.5" y="621" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
@@ -39,18 +55,32 @@
                                     <action selector="didPressToggleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnt-Ee-ZWW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63l-8m-GRh">
+                                <rect key="frame" x="165.5" y="311.5" width="44" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3o2-8j-HSe"/>
+                                    <constraint firstAttribute="width" constant="44" id="kc6-rk-rHU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="63l-8m-GRh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EVf-TV-vlk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgb-pV-CLO" secondAttribute="bottom" constant="16" id="UlE-Pu-LKj"/>
+                            <constraint firstItem="63l-8m-GRh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hv8-aB-P1e"/>
                             <constraint firstItem="pgb-pV-CLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pv0-Nx-ozT"/>
+                            <constraint firstItem="pgb-pV-CLO" firstAttribute="top" secondItem="rJW-0n-ydl" secondAttribute="bottom" constant="16" id="xmL-Ne-ZTq"/>
+                            <constraint firstItem="rJW-0n-ydl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXJ-oq-Shv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="appreciationLabel" destination="jus-Va-tbT" id="A1P-Fv-GGx"/>
+                        <outlet property="fuckLabel" destination="hsW-wy-N2N" id="hzy-6f-85r"/>
                         <outlet property="helloLabel" destination="R2M-dY-V6T" id="cEy-h6-PXo"/>
                         <outlet property="toggleButton" destination="pgb-pV-CLO" id="ysL-EC-jl0"/>
+                        <outlet property="uWuLabel" destination="J2E-Ho-lY9" id="RAQ-4u-hte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
