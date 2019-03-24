@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Emitter Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2M-dY-V6T">
-                                <rect key="frame" x="132" y="79" width="136" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emitter Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2M-dY-V6T">
+                                <rect key="frame" x="119.5" y="52" width="136" height="29"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,20 +56,34 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63l-8m-GRh">
                                 <rect key="frame" x="165.5" y="311.5" width="44" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eet-Ed-iCg">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3o2-8j-HSe"/>
-                                    <constraint firstAttribute="width" constant="44" id="kc6-rk-rHU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eet-Ed-iCg" secondAttribute="trailing" id="5Yl-tT-WOI"/>
+                                    <constraint firstItem="Eet-Ed-iCg" firstAttribute="top" secondItem="63l-8m-GRh" secondAttribute="top" id="6Lj-ed-jay"/>
+                                    <constraint firstAttribute="width" constant="44" id="SlB-85-xXX"/>
+                                    <constraint firstItem="Eet-Ed-iCg" firstAttribute="leading" secondItem="63l-8m-GRh" secondAttribute="leading" id="aNB-Ww-zok"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eet-Ed-iCg" secondAttribute="bottom" id="ink-M7-CVG"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
+                            <constraint firstItem="R2M-dY-V6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5yC-aK-syf"/>
                             <constraint firstItem="63l-8m-GRh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EVf-TV-vlk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pgb-pV-CLO" secondAttribute="bottom" constant="16" id="UlE-Pu-LKj"/>
                             <constraint firstItem="63l-8m-GRh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hv8-aB-P1e"/>
                             <constraint firstItem="pgb-pV-CLO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pv0-Nx-ozT"/>
                             <constraint firstItem="pgb-pV-CLO" firstAttribute="top" secondItem="rJW-0n-ydl" secondAttribute="bottom" constant="16" id="xmL-Ne-ZTq"/>
+                            <constraint firstItem="R2M-dY-V6T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="xsu-fq-eyb"/>
                             <constraint firstItem="rJW-0n-ydl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zXJ-oq-Shv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -79,6 +92,8 @@
                         <outlet property="appreciationLabel" destination="jus-Va-tbT" id="A1P-Fv-GGx"/>
                         <outlet property="fuckLabel" destination="hsW-wy-N2N" id="hzy-6f-85r"/>
                         <outlet property="helloLabel" destination="R2M-dY-V6T" id="cEy-h6-PXo"/>
+                        <outlet property="roundView" destination="63l-8m-GRh" id="RGT-vq-qUl"/>
+                        <outlet property="roundViewWIdth" destination="SlB-85-xXX" id="jsx-jy-i2Z"/>
                         <outlet property="toggleButton" destination="pgb-pV-CLO" id="ysL-EC-jl0"/>
                         <outlet property="uWuLabel" destination="J2E-Ho-lY9" id="RAQ-4u-hte"/>
                     </connections>

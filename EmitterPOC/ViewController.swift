@@ -10,25 +10,29 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-    @IBOutlet weak var helloLabel: UILabel!
-    @IBOutlet weak var appreciationLabel: UILabel!
-    @IBOutlet weak var toggleButton: UIButton!
-    @IBOutlet weak var fuckLabel: UILabel!
-    @IBOutlet weak var uWuLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.emitBasketBalls()
-            self.winkHelloLabel()
+    @IBOutlet private weak var helloLabel: UILabel!
+    @IBOutlet private weak var appreciationLabel: UILabel!
+    @IBOutlet private weak var toggleButton: UIButton!
+    @IBOutlet private weak var fuckLabel: UILabel!
+    @IBOutlet private weak var uWuLabel: UILabel!
+    @IBOutlet private weak var roundViewWIdth: NSLayoutConstraint!
+    @IBOutlet private weak var roundView: UIView! {
+        didSet {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(roundViewTapped))
+            gesture.numberOfTapsRequired = 1
+            roundView.addGestureRecognizer(gesture)
+            roundView.layer.cornerRadius = 22
         }
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+            emitBasketBalls()
+    }
+
     // MARK: - Helpers
-    lazy var winkLabels: [UILabel] = {
-        return [fuckLabel, helloLabel, uWuLabel]
-    }()
+    lazy var winkLabels: [UILabel] = { [fuckLabel, helloLabel, uWuLabel] }()
     
     private func winkHelloLabel() {
         UIView.animate(withDuration: 0.2, animations: {
@@ -39,9 +43,9 @@ final class ViewController: UIViewController {
     }
     
     private func resetWinkLabels() {
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.2) {
             self.winkLabels.forEach { $0.transform = .identity }
-        })
+        }
     }
     
     private func emitBasketBalls() {
@@ -55,6 +59,18 @@ final class ViewController: UIViewController {
     
     @IBAction private func didPressToggleButton(_ sender: UIButton) {
         winkHelloLabel()
+    }
+
+    @objc private func roundViewTapped() {
+        let isLarge = roundViewWIdth.constant > 45
+
+        roundViewWIdth.constant = isLarge
+            ? 44
+            : view.frame.width - 32
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 
