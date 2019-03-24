@@ -13,6 +13,7 @@
 		18B852F52246E45300787A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B852F42246E45300787A53 /* Assets.xcassets */; };
 		18B852F82246E45300787A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B852F62246E45300787A53 /* LaunchScreen.storyboard */; };
 		18B853032246E45400787A53 /* EmitterPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B853022246E45400787A53 /* EmitterPOCTests.swift */; };
+		18B8530E2246EA4300787A53 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B8530D2246EA4300787A53 /* Emitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		18B852FE2246E45400787A53 /* EmitterPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmitterPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B853022246E45400787A53 /* EmitterPOCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterPOCTests.swift; sourceTree = "<group>"; };
 		18B853042246E45400787A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B8530D2246EA4300787A53 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				18B852ED2246E45000787A53 /* AppDelegate.swift */,
 				18B852EF2246E45000787A53 /* ViewController.swift */,
+				18B8530D2246EA4300787A53 /* Emitter.swift */,
 				18B852F12246E45000787A53 /* Main.storyboard */,
 				18B852F42246E45300787A53 /* Assets.xcassets */,
 				18B852F62246E45300787A53 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 			files = (
 				18B852F02246E45000787A53 /* ViewController.swift in Sources */,
 				18B852EE2246E45000787A53 /* AppDelegate.swift in Sources */,
+				18B8530E2246EA4300787A53 /* Emitter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +365,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RNF778SHGZ;
 				INFOPLIST_FILE = EmitterPOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +384,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RNF778SHGZ;
 				INFOPLIST_FILE = EmitterPOC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
